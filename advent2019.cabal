@@ -1,0 +1,39 @@
+cabal-version:       2.4
+
+name:                advent2019
+version:             0.1.0.0
+license:             NONE
+license-file:        LICENSE
+author:              Scott Sedgwick
+maintainer:          scott.sedgwick@gmail.com
+copyright:           Copyright 2019
+category:            Advent of Code
+extra-source-files:  CHANGELOG.md
+
+library
+  exposed-modules:     Lib
+  other-modules:       Advent.Day1
+                    , Advent.Day2
+  build-depends:       base ^>=4.12.0.0
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+
+executable adv
+  main-is:             Main.hs
+  build-depends:       base ^>=4.12.0.0
+                     , advent2019
+  hs-source-dirs:      app
+  default-language:    Haskell2010
+
+Test-Suite tests
+  type:               exitcode-stdio-1.0
+  main-is:            Main.hs
+  other-modules:      Advent.Day1
+                    , Advent.Day2
+  hs-source-dirs:     test
+  build-depends:      base ^>=4.12.0.0
+                    , advent2019
+                    , test-framework
+                    , test-framework-hunit
+                    , HUnit
+  default-language:   Haskell2010
