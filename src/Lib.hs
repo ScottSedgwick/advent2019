@@ -1,7 +1,7 @@
 module Lib 
-  ( part1, part2, fuel, ffuels
-  , add
+  ( module Advent.Day1
+  , module Advent.Day2
   ) where
 
-import Advent.Day1 (part1, part2, fuel, ffuels)
-import Advent.Day2 (add)
+import Advent.Day1 
+import Advent.Day2 
