@@ -13,7 +13,8 @@ extra-source-files:  CHANGELOG.md
 library
   exposed-modules:     Lib
   other-modules:       Advent.Day1
-                    , Advent.Day2
+                     , Advent.Day2
+                     , Advent.Day3
   build-depends:       base ^>=4.12.0.0
   hs-source-dirs:      src
   default-language:    Haskell2010
@@ -30,6 +31,7 @@ Test-Suite tests
   main-is:            Main.hs
   other-modules:      Advent.Day1
                     , Advent.Day2
+                    , Advent.Day3
   hs-source-dirs:     test
   build-depends:      base ^>=4.12.0.0
                     , advent2019

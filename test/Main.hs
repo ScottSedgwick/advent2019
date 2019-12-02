@@ -1,7 +1,7 @@
 module Main where
 
 import Test.HUnit
-import Advent.Day2
+import Advent.Day3
 
 main :: IO ()
 main = do
