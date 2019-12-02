@@ -1,9 +1,12 @@
 module Main where
 
-import Test.HUnit
+import Test.HUnit (Counts(..), runTestTT)
+import System.Exit (die)
 import Advent.Day3
 
 main :: IO ()
 main = do
   counts <- runTestTT tests
-  pure ()
+  if (errors counts > 0) || (failures counts > 0)
+  then die "Failed unit tests."
+  else pure ()
