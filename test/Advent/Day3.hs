@@ -6,9 +6,9 @@ import Lib
 import qualified Data.IntMap.Strict as M
 
 d3tests = [
-    [Rt 8, Up 5, Lt 5, Dn 3] ~=? parse "R8,U5,L5,D3"
-  , [Up 7, Rt 6, Dn 4, Lt 4] ~=? parse "U7,R6,D4,L4"
-  , M.fromList [(0,0), (10000,1), (20000,2), (30000,3), (40000,4)] ~=? wirepath 0 0 [Rt 5] M.empty
+    [(Rt, 8), (Up, 5), (Lt, 5), (Dn, 3)] ~=? parse "R8,U5,L5,D3"
+  , [(Up, 7), (Rt, 6), (Dn, 4), (Lt, 4)] ~=? parse "U7,R6,D4,L4"
+  , M.fromList [(0,0), (10000,1), (20000,2), (30000,3), (40000,4)] ~=? wirepath 0 0 [(Rt, 5)] M.empty
   , M.fromList [(0,0), (60005,30), (30003, 40)] ~=? intersection (wirepath 0 0 (parse "R8,U5,L5,D3") M.empty) (wirepath 0 0 (parse "U7,R6,D4,L4") M.empty)
   ]
 
