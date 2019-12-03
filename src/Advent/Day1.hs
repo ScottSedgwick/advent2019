@@ -3,7 +3,7 @@ module Advent.Day1 where
 import Data.List (unfoldr)
 
 part1 :: Int
-part1 = sum $ map fuel1 weights
+part1 = sum $ map fuel1 d1inp1
 
 fuel1 :: Int -> Int
 fuel1 x = floor (fromIntegral x / 3.0) - 2
@@ -12,7 +12,7 @@ answer1 :: Int
 answer1 = 3270338
 
 part2 :: Int
-part2 = sum $ map fuel2 weights
+part2 = sum $ map fuel2 d1inp1
 
 answer2 :: Int
 answer2 = 4902650
@@ -25,8 +25,8 @@ fmay w = if f <= 0 then Nothing else Just (f, f)
   where
     f = fuel1 w
 
-weights :: [Int]
-weights =
+d1inp1 :: [Int]
+d1inp1 =
   [ 70219
   , 93253
   , 79077
