@@ -16,6 +16,7 @@ library
                      , Advent.Day1
                      , Advent.Day2
                      , Advent.Day3
+                     , Advent.Day4
   build-depends:       base ^>=4.12.0.0
                      , containers
                      , split
@@ -36,6 +37,7 @@ Test-Suite tests
   other-modules:      Advent.Day1
                     , Advent.Day2
                     , Advent.Day3
+                    , Advent.Day4
   hs-source-dirs:     test
   build-depends:      base ^>=4.12.0.0
                     , advent2019

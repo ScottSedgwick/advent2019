@@ -2,7 +2,7 @@ module Main where
 
 import Test.HUnit (Counts(..), runTestTT)
 import System.Exit (die)
-import Advent.Day3
+import Advent.Day4
 
 main :: IO ()
 main = do
